@@ -16,7 +16,7 @@ resource "aws_instance" "frontend" {
 
 resource "aws_route53_record" "frontend" {
   zone_id = "Z103214126L48SQW30RSR"
-  name    = "frontend-dev.devopsb71.online"
+  name    = "frontend-dev.devopsprabhu.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.frontend.private_ip]
@@ -33,7 +33,7 @@ resource "aws_instance" "cart" {
 
 resource "aws_route53_record" "cart" {
   zone_id = "Z103214126L48SQW30RSR"
-  name    = "cart-dev.devopsb71.online"
+  name    = "cart-dev.devopsprabhu.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.cart.private_ip]
@@ -50,7 +50,7 @@ resource "aws_instance" "catalogue" {
 
 resource "aws_route53_record" "catalogue" {
   zone_id = "Z103214126L48SQW30RSR"
-  name    = "catalogue-dev.devopsb71.online"
+  name    = "catalogue-dev.devopsprabhu.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.catalogue.private_ip]
@@ -67,7 +67,7 @@ resource "aws_instance" "user" {
 
 resource "aws_route53_record" "user" {
   zone_id = "Z103214126L48SQW30RSR"
-  name    = "user-dev.devopsb71.online"
+  name    = "user-dev.devopsprabhu.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.user.private_ip]
@@ -84,7 +84,7 @@ resource "aws_instance" "shipping" {
 
 resource "aws_route53_record" "shipping" {
   zone_id = "Z103214126L48SQW30RSR"
-  name    = "shipping-dev.devopsb71.online"
+  name    = "shipping-dev.devopsprabhu.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.shipping.private_ip]
@@ -101,7 +101,7 @@ resource "aws_instance" "payment" {
 
 resource "aws_route53_record" "payment" {
   zone_id = "Z103214126L48SQW30RSR"
-  name    = "payment-dev.devopsb71.online"
+  name    = "payment-dev.devopsprabhu.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.payment.private_ip]
@@ -118,7 +118,7 @@ resource "aws_instance" "mongodb" {
 
 resource "aws_route53_record" "mongodb" {
   zone_id = "Z103214126L48SQW30RSR"
-  name    = "mongodb-dev.devopsb71.online"
+  name    = "mongodb-dev.devopsprabhu.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.mongodb.private_ip]
@@ -135,7 +135,7 @@ resource "aws_instance" "mysql" {
 
 resource "aws_route53_record" "mysql" {
   zone_id = "Z103214126L48SQW30RSR"
-  name    = "mysql-dev.devopsb71.online"
+  name    = "mysql-dev.devopsprabhu.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.mysql.private_ip]
@@ -143,7 +143,7 @@ resource "aws_route53_record" "mysql" {
 
 resource "aws_route53_record" "redis" {
   zone_id = "Z103214126L48SQW30RSR"
-  name    = "redis-dev.devopsb71.online"
+  name    = "redis-dev.devopsprabhu.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.redis.private_ip]
@@ -170,7 +170,7 @@ resource "aws_instance" "rabbitmq" {
 
 resource "aws_route53_record" "rabbitmq" {
   zone_id = "Z103214126L48SQW30RSR"
-  name    = "rabbitmq-dev.devopsb71.online"
+  name    = "rabbitmq-dev.devopsprabhu.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.rabbitmq.private_ip]
