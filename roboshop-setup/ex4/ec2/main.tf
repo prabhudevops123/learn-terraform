@@ -8,14 +8,14 @@ data "aws_ami" "ami" {
 resource "aws_instance" "ec2" {
   ami                    = data.aws_ami.ami.image_id
   instance_type          = var.instance_type
-  vpc_security_group_ids = ["sg-0fc69f59ac03ac238"]
+  vpc_security_group_ids = ["sg-0ab98190dda1422c4"]
   tags = {
     Name = var.component
   }
 }
 
 resource "aws_route53_record" "record" {
-  zone_id = "Z103214126L48SQW30RSR"
+  zone_id = "Z04913851JPF0HITS640T"
   name    = "${var.component}-dev.devopsb71.online"
   type    = "A"
   ttl     = 30
