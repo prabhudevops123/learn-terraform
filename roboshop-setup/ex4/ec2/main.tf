@@ -8,15 +8,15 @@ data "aws_ami" "ami" {
 resource "aws_instance" "ec2" {
   ami                    = data.aws_ami.ami.image_id
   instance_type          = var.instance_type
-  vpc_security_group_ids = ["sg-0ab98190dda1422c4"]
+  vpc_security_group_ids = [var.sg_id]
   tags = {
     Name = var.component
   }
 }
 
 resource "aws_route53_record" "record" {
-  zone_id = "Z04913851JPF0HITS640T"
-  name    = "${var.component}-dev.devopsprabhu.online"
+  zone_id = "Z103214126L48SQW30RSR"
+  name    = "${var.component}-dev.devopsb71.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.ec2.private_ip]
@@ -24,4 +24,5 @@ resource "aws_route53_record" "record" {
 
 variable "component" {}
 variable "instance_type" {}
+variable "sg_id" {}
 
